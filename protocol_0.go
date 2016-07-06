@@ -124,9 +124,9 @@ func (pm *PickleMachine) opcode_STRING() error {
 		return fmt.Errorf("For STRING opcode, argument has invalid length %d", len(str))
 	}
 
-	if str[0] != '\'' || str[len(str)-1] != '\'' {
+	/*if str[0] != '\'' || str[len(str)-1] != '\'' {
 		return fmt.Errorf("For STRING opcode, argument has poorly formed value %q", str)
-	}
+	}*/
 
 	v := str[1 : len(str)-1]
 
